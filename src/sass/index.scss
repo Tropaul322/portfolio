@@ -1,3 +1,4 @@
+
 @import "./constansts";
 * {
   box-sizing: border-box;
@@ -7,12 +8,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  margin-top: 98px;
+  margin-top: 71px;
 
-  background: $background;
+  background: $aqua;
 }
 .container {
   width: 1020px;
+  height: 100%;
   margin: 0 auto;
 }
 header {
@@ -22,7 +24,7 @@ header {
   z-index: 1000;
 
   width: 100%;
-  padding: 10px 0 20px;
+  padding: 10px 0 10px;
 
   background: $main-color;
   border-bottom: 1px solid $border;
@@ -30,32 +32,32 @@ header {
 .menu_container {
   display: flex;
   justify-content: space-between;
-  padding-top: 3vh;
 }
 
 .menu_list {
   display: flex;
+  padding-top: 8px;
 
   list-style: none;
   text-align: center;
 }
 .menu_list li {
-  // border-bottom: 2px solid #000000;
-  padding: 5px;
+  padding: 3px;
 
   font-size: 1.5rem;
   text-transform: uppercase;
 
-  border: 2px solid black;
+  border: 1.25px solid black;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   cursor: pointer;
 
   transition: .5s ease;
+
+  user-select: none;
 }
 .menu_list li:hover {
   color: $background;
-  text-decoration: underline ;
 
   border-color: $background;
   border-top-left-radius: 0;
@@ -80,7 +82,7 @@ header {
 .menu_list li:nth-child(6) {
   margin-left: 20px;
 }
-.title {
+.menu_title {
   height: 50px;
 
   font-weight: 700;
@@ -92,29 +94,40 @@ header {
   border-bottom-right-radius: 5px;
 }
 .about_me {
+  height: 90vh;
   padding-top: 30px;
+
+  background-image: url(https://avatanplus.com/files/resources/original/5a7d51a521bd21617986ed12.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  border-bottom: 1px solid #fefefe;
 }
 .about_container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .about_me-info {
   width: 40vw;
+  height: 540px;
   padding: 10px;
 }
 
 .about_title h1 {
   font-weight: 900;
-  font-size: 2rem;
-  color: #ffffff;
+  font-size: 3rem;
+  color: $black;
 }
 .about_sub {
   width: 95%;
   margin-top: 1vh;
 
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: $main-color;
+  font-size: 1.75rem;
+  line-height: 2.2rem;
+  color: $black;
 }
 .about_info {
   margin-top: 4vh;
@@ -127,7 +140,7 @@ header {
 
   font-weight: 500;
   text-align: right;
-  color: $main-color;
+  color: $black;
   text-transform: uppercase;
 
   opacity: 90%;
@@ -138,20 +151,29 @@ header {
 .about_info p:nth-child(2) {
   width: 21.3vw;
 }
+.about_info p:nth-child(4) {
+  width: 14.3vw;
+}
+.about_info p:nth-child(4) .span_info {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
 .span_info a {
-  color: $main-color;
+  color: $black;
   text-decoration: none;
 }
 .span_info a:hover {
   opacity: .5;
 }
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 120px;
   height: 50px;
-  margin: 15px auto  ;
+  margin: 20px auto  ;
 
   font-weight: 700;
   font-size: 1.2rem;
@@ -172,12 +194,77 @@ header {
 .about_img {
   width: 475px;
   height: 285px;
+  margin-bottom: 185px;
 
   border-radius: 5px;
 }
 .about_img img {
   width: 100%;
+  height: 100%;
 
   border-radius: 10px;
   box-shadow: -2px 1px 34px 0 rgba(0,0,0,.56);
 }
+.icon {
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+}
+.skills {
+  min-height: 350px;
+  padding-top: 20px;
+
+  color: $main-color;
+
+  border-bottom: 1px solid #fefefe;
+}
+.title {
+  margin: 0;
+
+  font-weight: 900;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.skills_items {
+  display: flex;
+  justify-content: space-between;
+}
+.skills_item {
+  width: 450px;
+  margin-top: 40px;
+}
+.description {
+  margin-top: 10px;
+
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 25px;
+}
+.education {
+  height: 50vh;
+
+  font-family: url(/src/assets/fonts/Balqis.ttf);
+  color: black;
+
+  background-image: url(https://avatanplus.com/files/resources/original/5a7d51a521bd21617986ed12.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.education .title {
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+.education_info {
+  width: 450px;
+}
+.education .description div {
+  width: 450px;
+  height: 3px;
+  margin-top: 5px;
+
+  border-bottom: 2px solid #2f6b87;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+

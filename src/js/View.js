@@ -1,23 +1,22 @@
 import {
     HEADER,
     ABOUT,
+    SKILLS,
+    EDUCATION,
 } from './constants'
 class View {
     constructor () {
         this.age = 23; 
     }
     init() {
-        this.renderHeader()
-        this.renderAbout()
+        this.render('header', HEADER)
+        this.render('.about_me', ABOUT)
+        this.render('.skills', SKILLS)
+        this.render(".education", EDUCATION)
     }
-    renderHeader (){
-        this.header = document.querySelector('header');
-        this.header.innerHTML = HEADER
+    render(section, constant) {
+        this.header = document.querySelector(section);
+        this.header.innerHTML = constant
     }
-    renderAbout () {
-        this.about = document.querySelector('.about_me')
-        this.about.innerHTML = ABOUT
-    }
-
 }
 export default View;
